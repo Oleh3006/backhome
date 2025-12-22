@@ -1,1 +1,134 @@
+/* 1. СТИЛІ ДЛЯ ВСЬОГО ТІЛА САЙТУ (body) */
+body {
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. СТИЛІ ДЛЯ ШАПКИ САЙТУ (header) */
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 3. СТИЛІ ДЛЯ МЕНЮ (nav) */
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 0 10px;
+}
+
+/* 4. СТИЛІ ДЛЯ БЛОКУ КАТЕГОРІЙ (FLEXBOX) */
+.category-list {
+    padding: 20px;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    /* !!! ДОДАЄМО ЦЕ ПРАВИЛО: ВИРІВНЮВАННЯ ПО ВЕРХУ !!! */
+    align-items: flex-start; 
+}
+
+/* 5. СТИЛІ ДЛЯ КАРТКИ КОЖНОГО ТОВАРУ */
+.product-item {
+    width: 30%;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    margin: 10px 0;
+  min-height: 500px;
+}
+
+/* 6. Додатковий стиль для зображень */
+.product-item img {
+    max-width: 100%;
+    /* !!! ДОДАЙТЕ ОБМЕЖЕННЯ ВИСОТИ !!! */
+    max-height: 250px; 
+    object-fit: contain; /* Зображення вміщається, не обрізаючись */
+    
+    width: auto !important;
+    height: auto !important;
+}
+/* 7. СТИЛІ ДЛЯ ЦІНИ - ТЕПЕР ВОНА БУДЕ ЗЕЛЕНОЮ! */
+.price {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 10px 0;
+    /* Змушуємо браузер застосувати цей колір */
+    color: #4CAF50 !important; 
+}
+
+/* 7.a. СТИЛІ ДЛЯ ЗАГОЛОВКА КАТЕГОРІЙ */
+.category-list h3 {
+    /* Робимо текст по центру */
+    text-align: center;
+    /* Змушуємо заголовок займати 100% ширини рядка */
+    width: 100%; 
+    /* Додаємо відступ знизу, щоб не прилипати до карток */
+    margin-bottom: 20px;
+}
+
+/* 8. СТИЛІ ДЛЯ КНОПКИ */
+.buy-btn {
+    background-color: #ff9800; /* Помаранчевий */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5px;
+}
+
+/* 9. СТИЛЬ ПРИ НАВЕДЕННІ */
+.buy-btn:hover {
+    background-color: #e68a00;
+}
+
+/* 10. СТИЛІ ДЛЯ ПІДВАЛУ (FOOTER) */
+footer {
+    background-color: #333; /* Темний фон */
+    color: white; /* Білий текст */
+    text-align: center; 
+    padding: 20px 0; 
+    margin-top: 30px; 
+}
+
+/* 11. СТИЛІ ДЛЯ ПОСИЛАНЬ У ПІДВАЛІ */
+footer a {
+    color: #ff9800; /* Помаранчевий колір контактів */
+    text-decoration: none; /* Прибираємо підкреслення */
+}
+/* ================================================= */
+/* 12. МЕДІА-ЗАПИТИ (АДАПТИВНІСТЬ ДЛЯ СМАРТФОНІВ) */
+/* ================================================= */
+@media (max-width: 768px) {
+    
+    /* Правило: На маленьких екранах картки товарів (product-item) */
+    .product-item {
+        /* мають займати більшу частину ширини (90%) */
+        width: 90%; 
+        /* Центруємо картку на екрані */
+        margin: 10px auto; 
+        /* Прибираємо фіксовану висоту, щоб картки були гнучкими */
+        min-height: auto; 
+    }
+    
+    /* Правило: Основний контейнер категорій (category-list) */
+    .category-list {
+        /* Вирівнюємо контент по центру */
+        justify-content: center; 
+        padding: 10px;
+    }
+}
 
